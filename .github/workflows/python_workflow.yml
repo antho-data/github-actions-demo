@@ -1,10 +1,10 @@
-name: Shell commands
+name: Python commands
 on: [push]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name:  Python command
+      - name:  python commands
         run: |
           import platform
           print(platform.processor())
