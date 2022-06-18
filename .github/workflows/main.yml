@@ -1,5 +1,18 @@
-name: Azure Python 3.6
-on: [push]
+name: Python 3.6
+on: 
+  #schedule:
+  #  - cron: "* * * * *"
+  push:
+    branches:
+      - "master"
+      - "feature/*"
+      - "!feature/featC"
+    #tags:
+     # - "v1.*"
+     #paths:
+     #  - "**.js"
+  pull_request:
+    types: [closed, assigned, opened, reopened]
 jobs:
   build:
     runs-on: ubuntu-latest
